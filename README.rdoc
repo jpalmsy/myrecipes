@@ -1,15 +1,14 @@
-Chefs:
+Things ill need for reviews project
 
-What we have already:
-- Chef model and validations
-- Chefs table with columns and chefname/Email
-
-What we need to do:
-- Add passwords to the chefs table so chefs can be authenticated and logged in
-- Use email as log in credentials, since email is unique
-- Ability to register new chefs to use the app
-- Ability to display chef profile
-- Ability ro list chef using the app
-- Ability chefs to log in and log out of the app
-- Restiction actions like create recipe, edit recipe and like feature to logged in chef only
-- Restricting edit of recipes by chefs who created recipes 
+1. Migration to create reviews table, body, type = text_field, two foreign keys, reference chef_id, reference recipe_id
+2. You'll need to build the Review model
+3. You'll need to create tests for the spec, add validations to the review model
+4. Build associations, has_many and belongs_to
+5. Test out assocations in Rails console
+- recipe.reviews
+- chef.reviews
+6. Create routes (resources: new, create show)
+7. Authenticated chefs can create reviews, before_action_require_user
+8. You need to associate a chef_id and recipe_id (pass by params)
+9. Use existing code (such as description). Take ideas from recipes index page such as paginate
+use a test branch to test code 
